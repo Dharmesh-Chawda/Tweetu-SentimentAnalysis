@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div style="background-color:#ffffff;">
+    <div class="row">
+        <div class="col-lg-5" style="margin: auto;">
+            <h1 class="text-center" style="color:#1DA1F2;"><b>Tweet it Out!</b></h1>
+            <h1 class="text-center" style="color:#1DA1F2;"><b></b></h1>
+            <div class="text-center">
+                <a href="{% url 'register_url' %}" class="btn btn-info btn-lg" style="margin:auto;background-color: #1DA1F2;">Sign Up</a>
+            </div>
+            
+        </div>
+        <div class="col-lg-7">
+            <img src='{% static "tweetu_image.jpeg" %}' alt="" height="400px">
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

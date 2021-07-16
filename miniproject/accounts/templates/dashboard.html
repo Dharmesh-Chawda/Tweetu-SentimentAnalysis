@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="mentor-content">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <img class="img-fluid ment-img" height="100%" width="100%" src='{% static "sentiments.png" %}'>
+                    </div>
+                    <div class="container ment-content">
+                        <h2 class="text-center">Analyse Your Tweet</h2>
+                        <hr>
+                        <p class="text-center mentd-content">
+                            Sentiment Analysis is the process of computationally determining whether
+                            a piece of writing is positive , negative or neutral. It’s also known as opinion
+                            mining, deriving the opinion or attitude of a user.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class=" pt-4">
+                            <div class="row">
+                                <div class="col-md-12 tweet-form text-center">
+                                    <form action='/results/' method="POST">
+                                    {% csrf_token %}
+                                    <input type='text' name='tweet' id='tweet' class="form-control" placeholder="Enter your tweet"><br>
+                                    <button class="btn btn-primary" type="submit">Analyze</button>                                   
+                                    </form>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+{% endblock %}
